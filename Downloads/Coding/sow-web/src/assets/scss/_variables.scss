@@ -1,0 +1,76 @@
+// Primary Colors
+$magenta-500: #fa52b2; // Magenta
+$magenta-700: #E61C5F; // Magenta Hover
+$magenta-800: #D70E2B; // Magenta Active
+$magenta-100: #FDF0F0; // Magenta Subtlest
+
+// Secondary Colors
+$blue-500: #2979F8; // Blue
+$blue-700: #113ED9; // Blue Hover
+$blue-800: #2003B0; // Blue Active
+$blue-50: #F0EEFD; // Blue Subtlest
+
+// Neutral Colors with Transparency
+$neutral-10: rgba(0, 0, 0, 0);       // 0% opacity
+$neutral-100: rgba(0, 0, 0, 0.06);  // 6% opacity
+$neutral-200: rgba(0, 0, 0, 0.12);  // 12% opacity
+
+// Neutral Grayscale Palette
+$gray-50: #FFFFFF;  // White
+$gray-75: #FDFDFD;  // Off-White
+$gray-100: #F8F8F8; // Very Light Gray
+$gray-200: #E6E6E6; // Light Gray
+$gray-300: #D5D5D5; // Medium-Light Gray
+$gray-400: #B1B1B1; // Medium Gray
+$gray-500: #909090; // Dark Medium Gray
+$gray-600: #6D6D6D; // Dark Gray
+$gray-700: #464646; // Very Dark Gray
+$gray-800: #222222; // Almost Black
+$gray-900: #000000; // Black
+
+// Black Colors
+$black-50: #D2D2D2;   // Light Gray
+$black-100: #89898A;  // Gray
+$black-200: #414042;  // Dark Gray
+$black-300: #1D1C1E;  // Very Dark Gray
+$black-400: #181718;  // Darker Gray
+$black-500: #141414;  // Blackish Gray
+$black-600: #121212;  // Deep Black
+$black-700: #0F0F10;  // Almost Black
+$black-800: #0D0D0E;  // Black
+$black-900: #0C0C0D;  // Slightly Lighter Black
+$black-950: #070708;  // Deepest Black
+
+// Typography
+$font-family-primary: 'Poppins', sans-serif;
+$font-family-secondary: 'Open Sans', sans-serif;
+$font-family-mono: 'Roboto Mono', monospace;
+
+// Font weights
+$font-weight-regular: 500;
+// $font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Font sizes
+$font-size-xs: 12.5px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 20px;
+$font-size-2xl: 24px;
+$font-size-3xl: 30px;
+$font-size-4xl: 36px;
+$font-size-5xl: 48px;
+$font-size-6xl: 60px;
+
+// Line heights
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Specific line heights for headings
+$line-height-h1: 83px;
+$line-height-h2: 64px;
+$line-height-h3: 48px;
+$line-height-h4: 30px;
