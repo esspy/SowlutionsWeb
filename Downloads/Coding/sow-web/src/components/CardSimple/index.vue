@@ -1,72 +1,68 @@
-<template>
-  <div class="card">
-    <div class="image-container">
-      <img :src="imageUrl" alt="Product Icon" class="product-image" />
-    </div>
-    <h2 class="title">{{ title }}</h2>
-    <p class="description">{{ description }}</p>
-  </div>
-</template>
+&lt;template>
+  &lt;div class="card">
+    &lt;div class="image-container">
+      &lt;img :src="imageUrl" alt="Medal Icon" class="medal-image" />
+    &lt;/div>
+    &lt;h2 class="title">{{ title }}&lt;/h2>
+    &lt;p class="description">{{ description }}&lt;/p>
+  &lt;/div>
+&lt;/template>
 
-<script lang="ts">
+&lt;script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "Cards",
+  name: "CardSimple",
   props: {
     title: {
       type: String,
-      default: "Idea to Product",
+      default: "Experts",
     },
     description: {
       type: String,
-      default: "We hold your hand from idea to minimum viable product",
+      default: "We target domain experts",
     },
     imageUrl: {
       type: String,
-      default: "https://dashboard.codeparrot.ai/api/assets/Z4Z_n_zJ0Q4FLANu",
+      default: "https://dashboard.codeparrot.ai/api/assets/Z4jN_q44F0YMkTNT",
     },
   },
 });
-</script>
+&lt;/script>
 
-<style scoped lang="scss">
+&lt;style scoped lang="scss">
 @use "@/assets/scss/variables" as *;
 @use "@/assets/scss/semantic-colors" as *;
 
 .card {
-  width: 430px;
-  height: auto;
-  padding: 50px 50px 25px;
-  background-color: $gray-50;
-  border-radius: 12.5px;
+  width: 410px;
+  padding: 0 10px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  background-color: $gray-50;
 }
 
 .image-container {
-  width: 200px;
-  height: 200px;
-  background-color: $gray-200;
-  border-radius: 100px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.product-image {
-  width: 165px;
-  height: 165px;
+.medal-image {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 .title {
   font-family: $font-family-primary;
   font-weight: $font-weight-bold;
-  font-size: $font-size-2xl;
-  line-height: $line-height-h4;
+  font-size: 42px;
+  line-height: 44px;
   color: $text-bold;
   text-align: center;
   margin: 0;
@@ -80,6 +76,7 @@ export default defineComponent({
   color: $text-bold;
   text-align: center;
   margin: 0;
-  max-width: 330px;
+  width: 100%;
 }
-</style>
+&lt;/style>
+

@@ -44,13 +44,56 @@ export default defineComponent({
 @use "@/assets/scss/variables" as *;
 @use "@/assets/scss/semantic-colors" as *;
 
+// :deep(*) {
+//   outline: 1px solid red; // to debug
+// }
+
+// .screen3-content {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 100px 0;
+//   background: $gray-200;
+//   width: 100%;
+//   box-sizing: border-box;
+// }
+
+// .screen3-content {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 100px 50px;
+//   background: $gray-200;
+//   inline-size: 100%; // Use logical property instead of width
+//   box-sizing: border-box;
+//   margin: 0;
+// }
+
+// .cards-container {
+//   display: flex;
+//   flex-direction: row;
+//   gap: 25px;
+//   margin-top: 25px;
+//   inline-size: 100%;
+//   justify-content: center;
+//   box-sizing: border-box;
+
+//   :deep(.card) {
+//     flex: 1 1 0;
+//     max-width: 430px;
+//     min-width: 0;
+//   }
+// }
+
 .screen3-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 100px 50px;
-  background: $gray-100;
-  width: 100%;
+  background: $gray-200;
+  margin: 0 auto; // Add this
+  max-width: 100%; // Add this
+  box-sizing: border-box;
 }
 
 .title {
@@ -88,13 +131,15 @@ export default defineComponent({
   display: flex;
   flex-direction: row;
   gap: 25px;
-  margin-top: 25px;
+  margin: 25px 0; // Changed to auto margins
   width: 100%;
   justify-content: center;
+  box-sizing: border-box;
 
   :deep(.card) {
     flex: 1;
     max-width: 430px;
+    min-width: 0; // Add this to prevent flex items from growing beyond their container
   }
 }
 
