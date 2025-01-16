@@ -1,18 +1,46 @@
-&lt;template>
-  &lt;div class="card">
-    &lt;div class="image-container">
-      &lt;img :src="imageUrl" alt="Medal Icon" class="medal-image" />
-    &lt;/div>
-    &lt;h2 class="title">{{ title }}&lt;/h2>
-    &lt;p class="description">{{ description }}&lt;/p>
-  &lt;/div>
-&lt;/template>
+<template>
+  <div class="card">
+    <div class="icon-container">
+      <component
+        :is="resolvedIcon"
+        class="medal-image"
+        :style="{ color: iconColor, fill: iconColor }"
+      />
+    </div>
+    <h2 class="title">{{ title }}</h2>
+    <p class="description">{{ description }}</p>
+  </div>
+</template>
 
-&lt;script lang="ts">
-import { defineComponent } from "vue";
+<script lang="ts">
+import { defineComponent, PropType } from "vue";
+import MedalIcon from "../../assets/Icons/medal-solid.vue";
+import HandIcon from "../../assets/Icons/hand.vue";
+import HorseIcon from "../../assets/Icons/horse.vue";
+import TeamIcon from "../../assets/Icons/team.vue";
+import BookIcon from "../../assets/Icons/book.vue";
+import QuestionIcon from "../../assets/Icons/question.vue";
+
+const iconMap = {
+  medal: MedalIcon,
+  hand: HandIcon,
+  horse: HorseIcon,
+  team: TeamIcon,
+  book: BookIcon,
+  question: QuestionIcon,
+};
 
 export default defineComponent({
   name: "CardSimple",
+
+  components: {
+    MedalIcon,
+    HandIcon,
+    HorseIcon,
+    TeamIcon,
+    BookIcon,
+    QuestionIcon,
+  },
   props: {
     title: {
       type: String,
@@ -22,15 +50,25 @@ export default defineComponent({
       type: String,
       default: "We target domain experts",
     },
-    imageUrl: {
+
+    iconName: {
+      type: String as PropType<keyof typeof iconMap>,
+      default: "medal",
+    },
+    iconColor: {
       type: String,
-      default: "https://dashboard.codeparrot.ai/api/assets/Z4jN_q44F0YMkTNT",
+      default: "currentColor",
+    },
+  },
+  computed: {
+    resolvedIcon() {
+      return iconMap[this.iconName];
     },
   },
 });
-&lt;/script>
+</script>
 
-&lt;style scoped lang="scss">
+<style scoped lang="scss">
 @use "@/assets/scss/variables" as *;
 @use "@/assets/scss/semantic-colors" as *;
 
@@ -44,7 +82,7 @@ export default defineComponent({
   background-color: $gray-50;
 }
 
-.image-container {
+.icon-container {
   width: 100px;
   height: 100px;
   display: flex;
@@ -55,7 +93,11 @@ export default defineComponent({
 .medal-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  :deep(path),
+  :deep(svg) {
+    fill: currentColor;
+    color: inherit;
+  }
 }
 
 .title {
@@ -78,5 +120,4 @@ export default defineComponent({
   margin: 0;
   width: 100%;
 }
-&lt;/style>
-
+</style>
