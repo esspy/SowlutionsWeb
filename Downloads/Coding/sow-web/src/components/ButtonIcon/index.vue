@@ -111,7 +111,7 @@ export default defineComponent({
 </template>
 
 <script lang="ts">
-import { defineComponent, Component } from "vue";
+import { defineComponent, Component, type PropType } from "vue";
 import * as Icons from "../../assets/Icons"; // SVGs are exported from here
 
 // Create a type from your icons
@@ -121,7 +121,7 @@ export default defineComponent({
   name: "ButtonIcon",
   props: {
     icon: {
-      type: String as () => IconName,
+      type: String as PropType<IconName>, // Update this
       required: true,
     },
     iconAlt: {
@@ -165,21 +165,45 @@ export default defineComponent({
       default: "#333", // Default hover icon color
     },
   },
+  // computed: {
+  //   iconComponent(): Component {
+  //     return Icons[this.icon];
+  //   },
+  //   buttonStyles() {
+  //     return {
+  //       backgroundColor: this.backgroundColor,
+  //     };
+  //   },
+  //   iconStyles() {
+  //     return {
+  //       color: this.iconColor,
+  //     };
+  //   },
+  // },
   computed: {
-    iconComponent(): Component {
-      return Icons[this.icon];
+    iconComponent(): Component | null {
+      // Update return type
+      return Icons[this.icon as IconName] || null; // Add type assertion and null fallback
     },
     buttonStyles() {
       return {
+        "--background-color": this.backgroundColor,
+        "--hover-background-color": this.hoverBackgroundColor,
+        "--stroke-color": this.strokeColor,
+        "--hover-stroke-color": this.hoverStrokeColor,
         backgroundColor: this.backgroundColor,
+        borderColor: this.strokeColor,
       };
     },
     iconStyles() {
       return {
+        "--icon-color": this.iconColor,
+        "--hover-icon-color": this.hoverIconColor,
         color: this.iconColor,
       };
     },
   },
+
   emits: {
     click: null,
   },

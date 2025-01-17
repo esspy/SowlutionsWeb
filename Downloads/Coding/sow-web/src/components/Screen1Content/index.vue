@@ -3,17 +3,34 @@
     <!-- Left Icons -->
     <div class="left-screen">
       <div class="icon-wrapper">
+        <!-- <ButtonIcon
+         icon="Phone"
+          iconAlt="Phone"
+          :iconSrc="'https://dashboard.codeparrot.ai/api/assets/Z3-82tuArPNQGsal'"
+        /> -->
         <ButtonIcon
           icon="Phone"
           iconAlt="Phone"
-          :iconSrc="'https://dashboard.codeparrot.ai/api/assets/Z3-82tuArPNQGsal'"
+          iconColor="var(--gray-50)"
+          hoverIconColor="var(--black-900)"
+          backgroundColor="var(--neutral-10)"
+          hoverBackgroundColor="var(--gray-50)"
+          strokeColor="var(--gray-600)"
+          hoverStrokeColor="var(--gray-50)"
+          @click="handleLinkedInClick"
         />
       </div>
       <div class="icon-wrapper">
         <ButtonIcon
           icon="Envelope"
           iconAlt="Email"
-          :iconSrc="'https://dashboard.codeparrot.ai/api/assets/Z3-82tuArPNQGsam'"
+          iconColor="var(--gray-50)"
+          hoverIconColor="var(--black-900)"
+          backgroundColor="var(--neutral-10)"
+          hoverBackgroundColor="var(--gray-50)"
+          strokeColor="var(--gray-600)"
+          hoverStrokeColor="var(--gray-50)"
+          @click="handleLinkedInClick"
         />
       </div>
     </div>
@@ -42,21 +59,39 @@
         <ButtonIcon
           icon="LinkedIn"
           iconAlt="LinkedIn"
-          :iconSrc="'https://dashboard.codeparrot.ai/api/assets/Z3-82tuArPNQGsap'"
+          iconColor="var(--gray-50)"
+          hoverIconColor="var(--black-900)"
+          backgroundColor="var(--neutral-10)"
+          hoverBackgroundColor="var(--gray-50)"
+          strokeColor="var(--gray-600)"
+          hoverStrokeColor="var(--gray-50)"
+          @click="handleLinkedInClick"
         />
       </div>
       <div class="icon-wrapper">
         <ButtonIcon
           icon="Twitter"
           iconAlt="Twitter"
-          :iconSrc="'https://dashboard.codeparrot.ai/api/assets/Z3-82tuArPNQGsap'"
+          iconColor="var(--gray-50)"
+          hoverIconColor="var(--black-900)"
+          backgroundColor="var(--neutral-10)"
+          hoverBackgroundColor="var(--gray-50)"
+          strokeColor="var(--gray-600)"
+          hoverStrokeColor="var(--gray-50)"
+          @click="handleLinkedInClick"
         />
       </div>
       <div class="icon-wrapper">
         <ButtonIcon
           icon="Facebook"
           iconAlt="Facebook"
-          :iconSrc="'https://dashboard.codeparrot.ai/api/assets/Z3-82tuArPNQGsaq'"
+          iconColor="var(--gray-50)"
+          hoverIconColor="var(--black-900)"
+          backgroundColor="var(--neutral-10)"
+          hoverBackgroundColor="var(--gray-50)"
+          strokeColor="var(--gray-600)"
+          hoverStrokeColor="var(--gray-50)"
+          @click="handleLinkedInClick"
         />
       </div>
     </div>
@@ -88,6 +123,16 @@ export default defineComponent({
     secondaryButtonLabel: {
       type: String,
       default: "Learn More",
+    },
+    linkedinUrl: {
+      type: String,
+      default: "#",
+    },
+  },
+
+  methods: {
+    handleLinkedInClick() {
+      window.open(this.linkedinUrl, "_blank");
     },
   },
 });
