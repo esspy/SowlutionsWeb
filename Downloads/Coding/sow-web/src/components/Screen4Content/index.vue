@@ -7,33 +7,31 @@
           title="Experts"
           description="We target domain experts"
           icon-name="medal"
-          icon-color="#fa52b2"
+          icon-color="#e41382"
         />
         <CardSimple
           title="Skin in the game"
           description="The entrepreneur has to have something to lose"
           icon-name="hand"
-          icon-color="#fa52b2"
+          icon-color="#e41382"
         />
         <CardSimple
           title="Stubborn"
           description="The entrepreneur must be stubborn (in a good way)"
           icon-name="horse"
-          icon-color="#fa52b2"
+          icon-color="#e41382"
         />
-      </div>
-      <div class="cards-row">
         <CardSimple
           title="Team"
           description="The team needs to be cohesive and synergistic"
           icon-name="team"
-          icon-color="#fa52b2"
+          icon-color="#e41382"
         />
         <CardSimple
           title="Character"
           description="Transparency is a key factor in our choice of partners"
           icon-name="book"
-          icon-color="#fa52b2"
+          icon-color="#e41382"
         />
         <div class="contact-card">
           <div class="icon-container">
@@ -72,7 +70,8 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
+  gap: 25px;
+  min-height: auto;
   padding: 100px 50px;
   box-sizing: border-box;
   background-color: $gray-50;
@@ -83,7 +82,7 @@ export default defineComponent({
   flex-direction: column;
   gap: 25px;
   width: 100%;
-  max-width: 1340px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -96,16 +95,28 @@ export default defineComponent({
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
+
+  > * {
+    flex: 0 0 calc((100% - 50px) / 3); /* Account for two 25px gaps between three items */
+    width: calc((100% - 50px) / 3);
+    min-width: 300px;
+    margin: 0;
+    box-sizing: border-box;
+  }
 }
 
 .contact-card {
-  width: 410px;
+  // width: 410px;
   padding: 0 10px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 38px;
-  background-color: $gray-100;
+  // background-color: $gray-100;
+
+  :deep(.button-brand) {
+    width: 100%;
+  }
 }
 
 .icon-container {
@@ -115,10 +126,13 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
 
-  img {
-    width: 98px;
-    height: 96px;
-    object-fit: contain;
+  :deep(.question-icon) {
+    width: 100%;
+    height: 100%;
+
+    path {
+      fill: $text-brand;
+    }
   }
 }
 </style>
