@@ -38,7 +38,7 @@ export default defineComponent({
   width: 430px;
   height: auto;
   padding: 50px 50px 25px;
-  background-color: $gray-50;
+  background-color: $gray50;
   border-radius: 12.5px;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,7 @@ export default defineComponent({
 .image-container {
   width: 200px;
   height: 200px;
-  background-color: $gray-200;
+  background-color: $gray200;
   border-radius: 100px;
   display: flex;
   justify-content: center;

@@ -36,13 +36,13 @@ export default defineComponent({
   height: 100px;
   width: auto;
   box-sizing: border-box;
-  background-color: $neutral-10;
+  background-color: $neutral10;
   cursor: pointer;
   transition: all 0.2s ease;
 
   &:hover {
     .menu-text {
-      color: $gray-400;
+      color: $gray400;
     }
   }
 }

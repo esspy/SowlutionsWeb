@@ -28,11 +28,12 @@ export default defineComponent({
 
 <template>
   <div class="home">
-    <!-- <h1>Welcome to the Home Page</h1> -->
     <Screen1Content />
     <Screen2Content />
     <Screen3Content />
     <Screen4Content />
+    <Screen5Content />
+    <Screen6Content />
   </div>
 </template>
 
@@ -42,6 +43,8 @@ import Screen1Content from "../../components/Screen1Content/index.vue";
 import Screen2Content from "../../components/Screen2Content/index.vue";
 import Screen3Content from "../../components/Screen3Content/index.vue";
 import Screen4Content from "../../components/Screen4Content/index.vue";
+import Screen5Content from "../../components/Screen5Content/index.vue";
+import Screen6Content from "../../components/Screen6Content/index.vue";
 
 export default defineComponent({
   name: "Home",
@@ -50,6 +53,8 @@ export default defineComponent({
     Screen2Content,
     Screen3Content,
     Screen4Content,
+    Screen5Content,
+    Screen6Content,
   },
 });
 </script>

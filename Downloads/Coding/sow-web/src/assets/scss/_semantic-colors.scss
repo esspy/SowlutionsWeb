@@ -1,18 +1,18 @@
 @use 'variables' as *;
 
 // Text Colors
-$text-bold: $black-500;       // Bold: Black/500
-$text-subtle: $black-200;     // Subtle: Black/200
-$text-disabled: $black-100;   // Disabled: Black/100
-$text-inverse: $gray-50;      // Inverse: Gray/50
-$text-brand: $magenta-500;    // Magenta-500
+$text-bold: $black500;       // Bold: Black/500
+$text-subtle: $black200;     // Subtle: Black/200
+$text-disabled: $black100;   // Disabled: Black/100
+$text-inverse: $gray50;      // Inverse: Gray/50
+$text-brand: $magenta500;    // Magenta-500
 
 // Background Colors
-$bg-brand: $magenta-500;         // Brand: Magenta/500
-$bg-brand-hover: $blue-500;      // Brand Hover: Blue/500
-$bg-brand-active: $blue-700;     // Brand Active: Blue/700
-$bg-brand-disabled: $black-50;   // Brand Disabled: Black/50
-$bg-brand-subtlest: $magenta-100; // Brand Subtlest: Magenta/100
+$bg-brand: $magenta500;         // Brand: Magenta/500
+$bg-brand-hover: $blue500;      // Brand Hover: Blue/500
+$bg-brand-active: $blue700;     // Brand Active: Blue/700
+$bg-brand-disabled: $black50;   // Brand Disabled: Black/50
+$bg-brand-subtlest: $magenta100; // Brand Subtlest: Magenta/100
 
 // Label typography
 $label-font-weight: $font-weight-bold;

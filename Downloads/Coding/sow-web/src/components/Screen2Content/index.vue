@@ -46,7 +46,7 @@ export default defineComponent({
   width: 100%;
   padding: 0 50px 20px;
   gap: 10px;
-  background: $gray-50;
+  background: $gray50;
 }
 
 .towns {

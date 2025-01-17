@@ -45,8 +45,8 @@ export default defineComponent({
   width: auto;
   height: 53px;
   padding: 20px 24px;
-  background-color: $neutral-10;
-  border: 1px solid $gray-50;
+  background-color: $neutral10;
+  border: 1px solid $gray50;
   border-radius: 24px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -62,14 +62,14 @@ export default defineComponent({
 }
 
 .button-transparent:hover:not(:disabled) {
-  background-color: $gray-50; // Changed to solid white
+  background-color: $gray50; // Changed to solid white
   color: $text-bold; // Added black text color for hover
 }
 
 .button-transparent:active:not(:disabled) {
-  background-color: $gray-400; // Slightly darker white when active
+  background-color: $gray400; // Slightly darker white when active
   color: $text-bold;
-  border: 1px solid $gray-400;
+  border: 1px solid $gray400;
 }
 
 .button-transparent--disabled,

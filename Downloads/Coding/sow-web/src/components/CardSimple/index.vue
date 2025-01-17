@@ -79,7 +79,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  background-color: $gray-50;
+  background-color: $gray50;
 }
 
 .icon-container {

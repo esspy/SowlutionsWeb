@@ -45,7 +45,7 @@ export default defineComponent({
   justify-content: flex-start;
   align-items: center;
   padding: 0 50px;
-  border-bottom: 1px solid $gray-600;
+  border-bottom: 1px solid $gray600;
 }
 
 .menu-items {

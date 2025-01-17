@@ -1,6 +1,6 @@
 <template>
   <div class="header-section">
-    <h1 class="title">When Do We Invest?</h1>
+    <h1 class="title">{{ title }}</h1>
     <div class="brush-stroke">
       <img
         src="../../assets/Images/Illustrations/brush-stroke.png"
@@ -9,7 +9,7 @@
         height="27"
       />
     </div>
-    <p class="subtitle">WE FOCUS ON THE ENTREPRENEUR</p>
+    <p class="subtitle">{{ subtitle }}</p>
   </div>
 </template>
 
@@ -18,6 +18,16 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "HeaderSection",
+  props: {
+    title: {
+      type: String,
+      default: "When Do We Invest?",
+    },
+    subtitle: {
+      type: String,
+      default: "WE FOCUS ON THE ENTREPRENEUR",
+    },
+  },
 });
 </script>
 

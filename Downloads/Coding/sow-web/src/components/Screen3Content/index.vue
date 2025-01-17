@@ -53,7 +53,7 @@ export default defineComponent({
 //   flex-direction: column;
 //   align-items: center;
 //   padding: 100px 0;
-//   background: $gray-200;
+//   background: $gray200;
 //   width: 100%;
 //   box-sizing: border-box;
 // }
@@ -63,7 +63,7 @@ export default defineComponent({
 //   flex-direction: column;
 //   align-items: center;
 //   padding: 100px 50px;
-//   background: $gray-200;
+//   background: $gray200;
 //   inline-size: 100%; // Use logical property instead of width
 //   box-sizing: border-box;
 //   margin: 0;
@@ -90,7 +90,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   padding: 100px 50px;
-  background: $gray-200;
+  background: $gray200;
   margin: 0 auto; // Add this
   max-width: 100%; // Add this
   box-sizing: border-box;

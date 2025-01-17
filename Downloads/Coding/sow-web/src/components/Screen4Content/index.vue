@@ -74,7 +74,7 @@ export default defineComponent({
   min-height: auto;
   padding: 100px 50px;
   box-sizing: border-box;
-  background-color: $gray-50;
+  background-color: $gray50;
 }
 
 .card-section {
@@ -112,7 +112,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   gap: 38px;
-  // background-color: $gray-100;
+  // background-color: $gray100;
 
   :deep(.button-brand) {
     width: 100%;
