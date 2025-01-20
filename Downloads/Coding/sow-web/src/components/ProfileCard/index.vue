@@ -1,38 +1,34 @@
-#
 <template>
   <div class="profile-card">
     <div class="name">
       {{ name }}
     </div>
     <div class="company-title">
-      <a :href="companyUrl">{{ company }}</a
-      >, {{ title }}
+      <a :href="companyUrl" v-if="company">{{ company }},</a> {{ title }}
     </div>
-    <div class="description">
+    <div class="description" v-if="description">
       {{ description }}
     </div>
     <div class="profile-image">
       <img :src="profileImage" :alt="name" />
     </div>
     <div class="social-media">
-      <ButtonIcon
-        v-if="showLinkedIn"
-        icon="LinkedIn"
-        iconAlt="LinkedIn"
-        iconColor="var(--black-900)"
-        hoverIconColor="var(--black-900)"
-        backgroundColor="var(--neutral-10)"
-        hoverBackgroundColor="var(--neutral-10)"
-        strokeColor="var(--gray-200)"
-        hoverStrokeColor="var(--gray-900)"
-        @click="handleLinkedInClick"
-      />
-      <ButtonIcon
-        v-if="showTwitter"
-        icon="Twitter"
-        iconAlt="Twitter"
-        @click="handleTwitterClick"
-      />
+      <div class="icon-wrapper" v-if="showLinkedIn">
+        <ButtonIcon
+          icon="LinkedIn"
+          iconAlt="LinkedIn"
+          :class="['social-icon', buttonCustomClass]"
+          @click="handleLinkedInClick"
+        />
+      </div>
+      <div class="icon-wrapper" v-if="showTwitter">
+        <ButtonIcon
+          icon="Twitter"
+          iconAlt="Twitter"
+          :class="['social-icon', buttonCustomClass]"
+          @click="handleTwitterClick"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -54,8 +50,7 @@ export default defineComponent({
     },
     company: {
       type: String,
-      required: true,
-      default: "Company",
+      required: false,
     },
     companyUrl: {
       type: String,
@@ -68,13 +63,11 @@ export default defineComponent({
     },
     description: {
       type: String,
-      required: true,
-      default: "Description",
+      required: false,
     },
     profileImage: {
       type: String,
-      default:
-        "../../assets//Images/PhotosID/sowlutions_mentors_robb-mcdaniels-p-500.jpeg",
+      required: true,
     },
     linkedinUrl: {
       type: String,
@@ -92,8 +85,11 @@ export default defineComponent({
       type: Boolean,
       default: true,
     },
+    buttonCustomClass: {
+      type: String,
+      default: "",
+    },
   },
-
   methods: {
     handleLinkedInClick() {
       window.open(this.linkedinUrl, "_blank");
@@ -172,5 +168,24 @@ export default defineComponent({
     justify-content: center;
     margin-bottom: 48px;
   }
+}
+
+.social-icon {
+  --button-bg: #{$gray50};
+  --button-border: #{$gray200};
+  --icon-color: #{$gray900};
+  --button-bg-hover: #{$gray50};
+  --button-border-hover: #{$gray900};
+  --icon-color-hover: #{$black900};
+}
+
+// Custom magenta theme class
+.blue-theme {
+  --button-bg: #{$gray50};
+  --button-border: #{$gray200};
+  --icon-color: #{$blue500};
+  --button-bg-hover: #{$gray50};
+  --button-border-hover: #{$gray200};
+  --icon-color-hover: #{$blue700};
 }
 </style>

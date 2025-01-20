@@ -34,6 +34,7 @@ export default defineComponent({
     <Screen4Content />
     <Screen5Content />
     <Screen6Content />
+    <Screen7Content />
   </div>
 </template>
 
@@ -45,6 +46,7 @@ import Screen3Content from "../../components/Screen3Content/index.vue";
 import Screen4Content from "../../components/Screen4Content/index.vue";
 import Screen5Content from "../../components/Screen5Content/index.vue";
 import Screen6Content from "../../components/Screen6Content/index.vue";
+import Screen7Content from "../../components/Screen7Content/index.vue";
 
 export default defineComponent({
   name: "Home",
@@ -55,6 +57,7 @@ export default defineComponent({
     Screen4Content,
     Screen5Content,
     Screen6Content,
+    Screen7Content,
   },
 });
 </script>

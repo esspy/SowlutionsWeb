@@ -7,7 +7,7 @@ declare module '@/assets/scss/_variables.scss' {
     export const magenta500: string;
     export const gray50: string;
     export const gray200: string;
-    export const gray600: string;
+    export const gray600: string; 
     export const gray900: string;
     // Add other variables as needed
   }

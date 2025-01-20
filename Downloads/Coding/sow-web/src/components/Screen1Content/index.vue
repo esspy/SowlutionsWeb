@@ -3,20 +3,10 @@
     <!-- Left Icons -->
     <div class="left-screen">
       <div class="icon-wrapper">
-        <!-- <ButtonIcon
-         icon="Phone"
-          iconAlt="Phone"
-          :iconSrc="'https://dashboard.codeparrot.ai/api/assets/Z3-82tuArPNQGsal'"
-        /> -->
         <ButtonIcon
           icon="Phone"
           iconAlt="Phone"
-          iconColor="var(--gray-50)"
-          hoverIconColor="var(--black-900)"
-          backgroundColor="var(--neutral-10)"
-          hoverBackgroundColor="var(--gray-50)"
-          strokeColor="var(--gray-600)"
-          hoverStrokeColor="var(--gray-50)"
+          class="social-icon"
           @click="handleLinkedInClick"
         />
       </div>
@@ -24,12 +14,7 @@
         <ButtonIcon
           icon="Envelope"
           iconAlt="Email"
-          iconColor="var(--gray-50)"
-          hoverIconColor="var(--black-900)"
-          backgroundColor="var(--neutral-10)"
-          hoverBackgroundColor="var(--gray-50)"
-          strokeColor="var(--gray-600)"
-          hoverStrokeColor="var(--gray-50)"
+          class="social-icon"
           @click="handleLinkedInClick"
         />
       </div>
@@ -59,12 +44,7 @@
         <ButtonIcon
           icon="LinkedIn"
           iconAlt="LinkedIn"
-          iconColor="var(--gray-50)"
-          hoverIconColor="var(--black-900)"
-          backgroundColor="var(--neutral-10)"
-          hoverBackgroundColor="var(--gray-50)"
-          strokeColor="var(--gray-600)"
-          hoverStrokeColor="var(--gray-50)"
+          class="social-icon"
           @click="handleLinkedInClick"
         />
       </div>
@@ -72,12 +52,7 @@
         <ButtonIcon
           icon="Twitter"
           iconAlt="Twitter"
-          iconColor="var(--gray-50)"
-          hoverIconColor="var(--black-900)"
-          backgroundColor="var(--neutral-10)"
-          hoverBackgroundColor="var(--gray-50)"
-          strokeColor="var(--gray-600)"
-          hoverStrokeColor="var(--gray-50)"
+          class="social-icon"
           @click="handleLinkedInClick"
         />
       </div>
@@ -85,12 +60,7 @@
         <ButtonIcon
           icon="Facebook"
           iconAlt="Facebook"
-          iconColor="var(--gray-50)"
-          hoverIconColor="var(--black-900)"
-          backgroundColor="var(--neutral-10)"
-          hoverBackgroundColor="var(--gray-50)"
-          strokeColor="var(--gray-600)"
-          hoverStrokeColor="var(--gray-50)"
+          class="social-icon"
           @click="handleLinkedInClick"
         />
       </div>
@@ -220,5 +190,13 @@ export default defineComponent({
     width: 100%;
     justify-content: center;
   }
+}
+.social-icon {
+  --button-bg: #{$neutral10};
+  --button-border: #{$gray600};
+  --icon-color: #{$gray50};
+  --button-bg-hover: #{$gray50};
+  --button-border-hover: #{$gray50};
+  --icon-color-hover: #{$black900};
 }
 </style>
